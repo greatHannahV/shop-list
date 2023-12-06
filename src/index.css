@@ -1,13 +1,103 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: Ephesis, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+  background-color: #e9eeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3.3rem;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #bdcccc;
+  height: 100vh;
+  width: 100%;
+}
+.header {
+  font-size: 10rem;
+  color: #094d44;
+  background-color: #648888;
+  font-weight: 900;
+  letter-spacing: 5px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.components {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  align-items: start;
+  justify-content: center;
+  margin-top: 5rem;
+  position: relative;
+}
+.component__items {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 5rem;
+  background-color: #e9eeee;
+}
+.sort {
+  position: absolute;
+
+  right: 55%;
+  margin-top: 3rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.component__items li {
+  color: #0e2222;
+  font-size: 3rem;
+  list-style: number;
+  margin-bottom: 1.5rem;
+}
+.selected {
+  background-color: #91aaaa;
+}
+.component__input {
+  display: flex;
+  flex-direction: column;
+}
+input,
+select {
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  padding: 0.7rem;
+  text-align: center;
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  transition: 0.3s;
+  margin: 0.5rem;
+  background-color: #e9eeee;
+}
+button {
+  background-color: #0a5c52;
+  border-radius: 4rem;
+  width: 12rem;
+  margin: 0 auto;
+  height: 4rem;
+  color: #e9eeee;
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-family: inherit;
+}
+ul li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: center;
+}
+ul li button {
+  margin-left: auto;
 }
